@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CLASS ECHO</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">CE</h2>
+
+      <nav aria-label="Main">
+        <button id="newClassBtn" class="nav-btn" title="New Class" aria-label="New Class">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="currentColor" d="M19 13H13v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+          </svg>
+        </button>
+
+        <button id="historyBtn" class="nav-btn" title="History" aria-label="History">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="currentColor"
+              d="M13 3a9 9 0 0 1 9 9h-2a7 7 0 1 0-2.05 4.95l1.42 1.42A9 9 0 1 1 13 3zm-1 5h2v6l5.25 3.15-1 1.63L12 14V8z"/>
+          </svg>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+      <header>
+        <h1 class="title">CLASS ECHO</h1>
+        <p class="subtitle">LISTEN · LEARN · REMEMBER</p>
+      </header>
+
+      <!-- Subject input -->
+      <input type="text" id="subjectName" placeholder="Enter Subject Name" class="subject-input" />
+
+      <!-- Transcription / comment box -->
+      <div class="transcription-box" aria-live="polite">
+        <textarea id="transcriptArea" placeholder="Live transcription will appear here..." ></textarea>
+
+        <button id="micBtn" class="mic-btn" aria-pressed="false" aria-label="Start transcription">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+            <path fill="currentColor"
+              d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 20h2v-2h-2v2z"/>
+          </svg>
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

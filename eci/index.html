@@ -1,4 +1,6 @@
-<!doctype html>
+
+
+ <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -7,50 +9,79 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="dashboard">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2 class="logo">CE</h2>
+  <!-- Top bar -->
+  <header class="topbar">
+    <button id="hamburgerBtn" class="hamburger-btn" aria-label="Menu">
+      <!-- ChatGPT Logo -->
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 2a8 8 0 1 1-8 8 8 8 0 0 1 8-8z"/>
+        <circle cx="12" cy="12" r="4" fill="currentColor"/>
+      </svg>
+    </button>
+    <h1 class="app-title">CLASS ECHO</h1>
+  </header>
 
-      <nav aria-label="Main">
-        <button id="newClassBtn" class="nav-btn" title="New Class" aria-label="New Class">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path fill="currentColor" d="M19 13H13v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+  <!-- Sidebar (Hamburger Menu) -->
+  <aside id="sideMenu" class="side-menu">
+    <nav>
+      <button class="menu-item">
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path fill="currentColor" d="M19 13H13v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+        </svg>
+        <span>New Chat</span>
+      </button>
+      <button class="menu-item">
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path fill="currentColor" d="M13 3a9 9 0 0 1 9 9h-2a7 7 0 1 0-2.05 4.95l1.42 
+             1.42A9 9 0 1 1 13 3zm-1 5h2v6l5.25 3.15-1 
+             1.63L12 14V8z"/>
+        </svg>
+        <span>History</span>
+      </button>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <div class="content">
+  <h1 class="main-title">CLASS ECHO</h1>
+  <h2 class="sub-title">LISTEN · LEARN · REMEMBER</h2>
+
+</div>
+
+
+    <!-- Transcription area -->
+    <div class="transcription-box" aria-live="polite">
+      <textarea id="transcriptArea" placeholder="Live transcription will appear here..."></textarea>
+      <button id="micBtn" class="mic-btn" aria-label="Start transcription">
+        <!-- Professional Mic SVG -->
+        <svg viewBox="0 0 24 24" width="28" height="28">
+          <path fill="currentColor"
+            d="M12 14a3 3 0 0 0 3-3V6a3 
+             3 0 0 0-6 0v5a3 3 0 0 0 3 
+             3zm5-3a5 5 0 0 1-10 
+             0H5a7 7 0 0 0 14 
+             0h-2zM11 20h2v-2h-2v2z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Summary Section -->
+    <section class="summary-section">
+      <h2 class="section-title">CLASS ECHO</h2>
+      <div id="summaryDashboard" class="summary-dashboard">
+        <div class="preview-content">
+          <svg class="summary-icon" viewBox="0 0 24 24" width="40" height="40">
+            <path fill="currentColor" 
+              d="M6 2a2 2 0 0 0-2 2v16a2 
+                 2 0 0 0 2 2h12a2 2 0 0 0 
+                 2-2V8l-6-6H6z"/>
           </svg>
-        </button>
-
-        <button id="historyBtn" class="nav-btn" title="History" aria-label="History">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path fill="currentColor"
-              d="M13 3a9 9 0 0 1 9 9h-2a7 7 0 1 0-2.05 4.95l1.42 1.42A9 9 0 1 1 13 3zm-1 5h2v6l5.25 3.15-1 1.63L12 14V8z"/>
-          </svg>
-        </button>
-      </nav>
-    </aside>
-
-    <!-- Main content -->
-    <main class="content">
-      <header>
-        <h1 class="title">CLASS ECHO</h1>
-        <p class="subtitle">LISTEN · LEARN · REMEMBER</p>
-      </header>
-
-      <!-- Subject input -->
-      <input type="text" id="subjectName" placeholder="Enter Subject Name" class="subject-input" />
-
-      <!-- Transcription / comment box -->
-      <div class="transcription-box" aria-live="polite">
-        <textarea id="transcriptArea" placeholder="Live transcription will appear here..." ></textarea>
-
-        <button id="micBtn" class="mic-btn" aria-pressed="false" aria-label="Start transcription">
-          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
-            <path fill="currentColor"
-              d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 20h2v-2h-2v2z"/>
-          </svg>
-        </button>
+          <h3>View Summary</h3>
+          <p>Tap to expand</p>
+        </div>
       </div>
-    </main>
-  </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>

@@ -7,18 +7,16 @@
 }
 
 body {
-  background: linear-gradient(135deg,
-  #2c003e,
-  #512b58,
-  #734b6d,
-  #b96a83,
-  #ff9966,
-  #ff5e62
-);
-
+  background: linear-gradient(to bottom, 
+    #0d0d1a 0%,  
+    #2c003e 25%, 
+    #6a0572 50%,  
+    #7f0c51 75%, 
+    #0d0d1a 100% 
+  );
   background-size: 400% 400%;
-  animation: horizonShift 15s ease infinite;
-  color: #4c0a4d;
+  animation: horizonShift 18s ease infinite;
+  color: #f5f5f5;
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -62,10 +60,9 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   background: linear-gradient(90deg, #ffd369, #ff9a8b, #00e5ff);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-text-shadow: 0 0 25px rgba(255, 180, 200, 0.8);
-
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 25px rgba(255, 180, 200, 0.8);
 }
 
 /* Sidebar Menu */
@@ -117,18 +114,28 @@ text-shadow: 0 0 25px rgba(255, 180, 200, 0.8);
   position: relative;
 }
 
-/* Central Gradient Title - Animated */
+/* Horizon Gradient Title */
 .main-title {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   font-weight: 900;
   text-transform: uppercase;
-  background: linear-gradient(270deg, #fff, #ffe9f7, #ffd6e0, #fff);
-  background-size: 600% 600%;
+  background: linear-gradient(90deg, #ff9a8b, #ffd369, #00e5ff, #ff9a8b);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin-bottom: 2rem;
-  animation: gradientShift 8s ease infinite, glowPulse 3s ease-in-out infinite;
+  margin-bottom: 1rem;
+  animation: gradientShift 10s ease infinite, glowPulse 4s ease-in-out infinite;
+}
+
+.sub-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 3rem;
+  color: #ffd369;
+  text-shadow: 0 0 15px rgba(255, 211, 105, 0.8);
 }
 
 @keyframes gradientShift {
@@ -138,30 +145,11 @@ text-shadow: 0 0 25px rgba(255, 180, 200, 0.8);
 }
 
 @keyframes glowPulse {
-  0%, 100% { text-shadow: 0 0 15px rgba(255,220,240,0.6); }
-  50% { text-shadow: 0 0 35px rgba(255,200,230,1); }
+  0%, 100% { text-shadow: 0 0 20px rgba(255, 180, 200, 0.6); }
+  50% { text-shadow: 0 0 40px rgba(255, 180, 200, 1); }
 }
 
-/* Sub Title */
-.sub-title {
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-top: -1rem;
-  margin-bottom: 3rem;
-  background: linear-gradient(90deg, #fff, #ffd6e0, #ffe9f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fadeGlow 4s ease-in-out infinite;
-}
-
-@keyframes fadeGlow {
-  0%, 100% { text-shadow: 0 0 10px rgba(255,220,240,0.6); }
-  50% { text-shadow: 0 0 20px rgba(255,200,230,0.9); }
-}
-
-/* Transcription Box (unchanged) */
+/* Transcription Box */
 .transcription-box {
   display: flex;
   align-items: center;
@@ -210,7 +198,7 @@ text-shadow: 0 0 25px rgba(255, 180, 200, 0.8);
   background: #ffd6e0;
 }
 
-/* Summary Section (unchanged) */
+/* Summary Section */
 .summary-section {
   position: absolute;
   right: 2rem;
@@ -256,4 +244,3 @@ text-shadow: 0 0 25px rgba(255, 180, 200, 0.8);
   align-items: center;
   justify-content: center;
 }
-
